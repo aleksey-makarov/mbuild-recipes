@@ -11,8 +11,9 @@ in
 
 let GithubRecipeContract = {
   type | std.contract.Equal "github",
+  owner | String,
   repo | String,
-  commit | String,
+  rev | String,
   inputs | NameList | optional,
   outputs | NameList | optional,
   ..
