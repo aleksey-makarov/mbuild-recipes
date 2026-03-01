@@ -4,7 +4,5 @@
     outputs = ["inetutils-src-2.6"],
     url = "https://ftp.gnu.org/gnu/inetutils/inetutils-2.6.tar.xz",
     hash = "md5:401d7d07682a193960bcdecafd03de94",
-    layout = "archive-tree",
-    archive_format = "tar-xz",
   },
 }

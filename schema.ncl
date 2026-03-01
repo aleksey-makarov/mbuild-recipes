@@ -47,15 +47,12 @@ let FetchRecipeContract = {
   type | std.contract.Equal "fetch",
   url | String,
   hash | String,
-  layout
-    | OneOfStrings [
-      "file",
-      "archive-tree",
-    ],
+  unpack | Bool | optional,
   archive_format
     | OneOfStrings [
       "tar-gz",
       "tar-xz",
+      "tar-bz2",
       "zip",
     ]
     | optional,

@@ -4,7 +4,5 @@
     outputs = ["libtool-src-2.5.4"],
     url = "https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.xz",
     hash = "md5:22e0a29df8af5fdde276ea3a7d351d30",
-    layout = "archive-tree",
-    archive_format = "tar-xz",
   },
 }
