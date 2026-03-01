@@ -38,19 +38,25 @@ let TextRecipeContract = {
 }
 in
 
+let OneOfStrings = fun values =>
+  std.contract.from_predicate (fun value => std.array.elem value values)
+in
+
 let FetchRecipeContract = {
   type | std.contract.Equal "fetch",
   url | String,
   hash | String,
-  layout | std.contract.Enum [
-    "file",
-    "archive-tree",
-  ],
-  archive_format | std.contract.Enum [
-    "tar-gz",
-    "tar-xz",
-    "zip",
-  ]
+  layout
+    | OneOfStrings [
+      "file",
+      "archive-tree",
+    ],
+  archive_format
+    | OneOfStrings [
+      "tar-gz",
+      "tar-xz",
+      "zip",
+    ]
     | optional,
   artifact_kind | String | optional,
   outputs | NameList | optional,
