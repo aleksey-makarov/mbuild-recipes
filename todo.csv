@@ -1,0 +1,18 @@
+package,status,note
+bc,done,
+expat,done,
+flex,error,provide `autopoint` (gettext tooling) in the builder image
+iana-etc,error,add a dedicated build-script artifact for iana-etc packaging
+libffi,done,
+libxcrypt,done,
+lz4,done,
+meson,error,add a dedicated build-script artifact for Meson project installation
+ninja,error,package googletest as input artifact (or patch ninja build to avoid online fetch)
+openssl,error,add a dedicated OpenSSL build-script artifact (uses OpenSSL `Configure` flow)
+shadow,error,provide `autopoint` (gettext tooling) in the builder image
+sysklogd,done,
+systemd,error,add `gperf` to the builder image
+sysvinit,done,
+vim,done,
+xz,done,
+zstd,done,
