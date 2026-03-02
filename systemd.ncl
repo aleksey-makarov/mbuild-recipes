@@ -1,6 +1,7 @@
 {
   "systemd-257.8" = {
     type = "binary",
+    status = "add `gperf` to the builder image",
     inputs = ["systemd-src-257.8", "buildscript-meson"],
     outputs = ["systemd-257.8"],
   },

@@ -1,6 +1,7 @@
 {
   "meson-1.8.3" = {
     type = "binary",
+    status = "add a dedicated build-script artifact for Meson project installation",
     inputs = ["meson-src-1.8.3"],
     outputs = ["meson-1.8.3"],
     script = m%"

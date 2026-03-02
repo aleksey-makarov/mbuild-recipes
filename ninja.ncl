@@ -1,6 +1,7 @@
 {
   "ninja-1.13.1" = {
     type = "binary",
+    status = "package googletest as input artifact (or patch ninja build to avoid online fetch)",
     inputs = ["ninja-src-1.13.1", "buildscript-cmake"],
     outputs = ["ninja-1.13.1"],
   },

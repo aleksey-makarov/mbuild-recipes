@@ -1,6 +1,7 @@
 {
   "flex-2.6.4" = {
     type = "binary",
+    status = "provide `autopoint` (gettext tooling) in the builder image",
     inputs = ["flex-src-2.6.4", "buildscript-autotools"],
     outputs = ["flex-2.6.4"],
   },

@@ -1,6 +1,7 @@
 {
   "iana-etc-20250807" = {
     type = "binary",
+    status = "add a dedicated build-script artifact for iana-etc packaging",
     inputs = ["iana-etc-src-20250807"],
     outputs = ["iana-etc-20250807"],
     script = m%"

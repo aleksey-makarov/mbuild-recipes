@@ -22,6 +22,7 @@ in
 
 let BinaryRecipeContract = {
   type | std.contract.Equal "binary",
+  status | String | default = "ok",
   script | String | optional,
   inputs | NameList | optional,
   outputs | NameList | optional,
