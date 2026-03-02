@@ -1,7 +1,7 @@
 {
   "shadow-4.18.0" = {
     type = "binary",
-    status = "provide `autopoint` (gettext tooling) in the builder image",
+    status = "missing build dependencies: autopoint, xsltproc",
     inputs = ["shadow-src-4.18.0", "buildscript-autotools"],
     outputs = ["shadow-4.18.0"],
   },

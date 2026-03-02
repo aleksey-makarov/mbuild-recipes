@@ -1,7 +1,7 @@
 {
   "openssl-3.5.2" = {
     type = "binary",
-    status = "add a dedicated OpenSSL build-script artifact (uses OpenSSL `Configure` flow)",
+    status = "missing dependency: dedicated OpenSSL buildscript artifact",
     inputs = ["openssl-src-3.5.2"],
     outputs = ["openssl-3.5.2"],
     script = m%"
