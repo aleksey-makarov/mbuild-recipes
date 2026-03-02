@@ -1,4 +1,10 @@
 {
+  "elfutils-0.193" = {
+    type = "binary",
+    inputs = ["elfutils-src-0.193", "buildscript-autotools"],
+    outputs = ["elfutils-0.193"],
+  },
+
   "elfutils-src-0.193" = {
     type = "fetch",
     outputs = ["elfutils-src-0.193"],

@@ -1,4 +1,10 @@
 {
+  "attr-2.5.2" = {
+    type = "binary",
+    inputs = ["attr-src-2.5.2", "buildscript-autotools"],
+    outputs = ["attr-2.5.2"],
+  },
+
   "attr-src-2.5.2" = {
     type = "fetch",
     outputs = ["attr-src-2.5.2"],

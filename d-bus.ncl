@@ -1,4 +1,10 @@
 {
+  "d-bus-1.16.2" = {
+    type = "binary",
+    inputs = ["d-bus-src-1.16.2", "buildscript-meson"],
+    outputs = ["d-bus-1.16.2"],
+  },
+
   "d-bus-src-1.16.2" = {
     type = "fetch",
     outputs = ["d-bus-src-1.16.2"],

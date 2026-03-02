@@ -1,4 +1,11 @@
 {
+  "acl-2.3.2" = {
+    type = "binary",
+    status = "missing dependency artifact: attr development headers (attr/error_context.h)",
+    inputs = ["acl-src-2.3.2", "buildscript-autotools"],
+    outputs = ["acl-2.3.2"],
+  },
+
   "acl-src-2.3.2" = {
     type = "fetch",
     outputs = ["acl-src-2.3.2"],
