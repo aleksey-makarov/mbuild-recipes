@@ -46,7 +46,7 @@ in
 
 let FetchRecipeContract = {
   type | std.contract.Equal "fetch",
-  url | String,
+  url | std.contract.any_of [String, Array String],
   hash | String,
   unpack | Bool | optional,
   archive_format
