@@ -1,4 +1,10 @@
 {
+  "file-5.46" = {
+    type = "binary",
+    inputs = ["file-src-5.46", "buildscript-autotools"],
+    outputs = ["file-5.46"],
+  },
+
   "file-src-5.46" = {
     type = "fetch",
     outputs = ["file-src-5.46"],
