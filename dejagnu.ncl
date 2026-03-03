@@ -1,4 +1,10 @@
 {
+  "dejagnu-1.6.3" = {
+    type = "binary",
+    inputs = ["dejagnu-src-1.6.3", "buildscript-autotools"],
+    outputs = ["dejagnu-1.6.3"],
+  },
+
   "dejagnu-src-1.6.3" = {
     type = "fetch",
     outputs = ["dejagnu-src-1.6.3"],

@@ -1,4 +1,10 @@
 {
+  "bison-3.8.2" = {
+    type = "binary",
+    inputs = ["bison-src-3.8.2", "buildscript-autotools"],
+    outputs = ["bison-3.8.2"],
+  },
+
   "bison-src-3.8.2" = {
     type = "fetch",
     outputs = ["bison-src-3.8.2"],

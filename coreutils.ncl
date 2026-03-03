@@ -1,4 +1,10 @@
 {
+  "coreutils-9.7" = {
+    type = "binary",
+    inputs = ["coreutils-src-9.7", "buildscript-autotools"],
+    outputs = ["coreutils-9.7"],
+  },
+
   "coreutils-src-9.7" = {
     type = "fetch",
     outputs = ["coreutils-src-9.7"],

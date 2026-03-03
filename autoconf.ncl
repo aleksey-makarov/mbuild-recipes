@@ -1,7 +1,6 @@
 {
   "autoconf-2.72" = {
     type = "binary",
-    status = "ok",
     inputs = ["autoconf-src-2.72", "buildscript-autotools"],
     outputs = ["autoconf-2.72"],
   },

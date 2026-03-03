@@ -1,4 +1,10 @@
 {
+  "bash-5.3" = {
+    type = "binary",
+    inputs = ["bash-src-5.3", "buildscript-autotools"],
+    outputs = ["bash-5.3"],
+  },
+
   "bash-src-5.3" = {
     type = "fetch",
     outputs = ["bash-src-5.3"],

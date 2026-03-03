@@ -1,4 +1,10 @@
 {
+  "diffutils-3.12" = {
+    type = "binary",
+    inputs = ["diffutils-src-3.12", "buildscript-autotools"],
+    outputs = ["diffutils-3.12"],
+  },
+
   "diffutils-src-3.12" = {
     type = "fetch",
     outputs = ["diffutils-src-3.12"],
