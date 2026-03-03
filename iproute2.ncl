@@ -1,4 +1,10 @@
 {
+  "iproute2-6.16.0" = {
+    type = "binary",
+    inputs = ["iproute2-src-6.16.0", "buildscript-gnu-make"],
+    outputs = ["iproute2-6.16.0"],
+  },
+
   "iproute2-src-6.16.0" = {
     type = "fetch",
     outputs = ["iproute2-src-6.16.0"],

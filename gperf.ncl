@@ -1,4 +1,10 @@
 {
+  "gperf-3.3" = {
+    type = "binary",
+    inputs = ["gperf-src-3.3", "buildscript-autotools"],
+    outputs = ["gperf-3.3"],
+  },
+
   "gperf-src-3.3" = {
     type = "fetch",
     outputs = ["gperf-src-3.3"],

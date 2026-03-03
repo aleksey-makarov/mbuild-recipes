@@ -1,4 +1,10 @@
 {
+  "gzip-1.14" = {
+    type = "binary",
+    inputs = ["gzip-src-1.14", "buildscript-autotools"],
+    outputs = ["gzip-1.14"],
+  },
+
   "gzip-src-1.14" = {
     type = "fetch",
     outputs = ["gzip-src-1.14"],

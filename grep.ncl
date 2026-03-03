@@ -1,4 +1,10 @@
 {
+  "grep-3.12" = {
+    type = "binary",
+    inputs = ["grep-src-3.12", "buildscript-autotools"],
+    outputs = ["grep-3.12"],
+  },
+
   "grep-src-3.12" = {
     type = "fetch",
     outputs = ["grep-src-3.12"],

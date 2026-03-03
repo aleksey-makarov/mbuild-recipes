@@ -1,4 +1,10 @@
 {
+  "gmp-6.3.0" = {
+    type = "binary",
+    inputs = ["gmp-src-6.3.0", "buildscript-autotools"],
+    outputs = ["gmp-6.3.0"],
+  },
+
   "gmp-src-6.3.0" = {
     type = "fetch",
     outputs = ["gmp-src-6.3.0"],

@@ -1,4 +1,10 @@
 {
+  "gettext-0.26" = {
+    type = "binary",
+    inputs = ["gettext-src-0.26", "buildscript-autotools"],
+    outputs = ["gettext-0.26"],
+  },
+
   "gettext-src-0.26" = {
     type = "fetch",
     outputs = ["gettext-src-0.26"],

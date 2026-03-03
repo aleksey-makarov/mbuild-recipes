@@ -1,4 +1,10 @@
 {
+  "groff-1.23.0" = {
+    type = "binary",
+    inputs = ["groff-src-1.23.0", "buildscript-autotools"],
+    outputs = ["groff-1.23.0"],
+  },
+
   "groff-src-1.23.0" = {
     type = "fetch",
     outputs = ["groff-src-1.23.0"],

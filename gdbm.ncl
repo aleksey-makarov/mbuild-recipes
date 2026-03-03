@@ -1,4 +1,10 @@
 {
+  "gdbm-1.26" = {
+    type = "binary",
+    inputs = ["gdbm-src-1.26", "buildscript-autotools"],
+    outputs = ["gdbm-1.26"],
+  },
+
   "gdbm-src-1.26" = {
     type = "fetch",
     outputs = ["gdbm-src-1.26"],

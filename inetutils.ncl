@@ -1,4 +1,10 @@
 {
+  "inetutils-2.6" = {
+    type = "binary",
+    inputs = ["inetutils-src-2.6", "buildscript-autotools"],
+    outputs = ["inetutils-2.6"],
+  },
+
   "inetutils-src-2.6" = {
     type = "fetch",
     outputs = ["inetutils-src-2.6"],

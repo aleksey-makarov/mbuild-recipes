@@ -1,4 +1,10 @@
 {
+  "gawk-5.3.2" = {
+    type = "binary",
+    inputs = ["gawk-src-5.3.2", "buildscript-autotools"],
+    outputs = ["gawk-5.3.2"],
+  },
+
   "gawk-src-5.3.2" = {
     type = "fetch",
     outputs = ["gawk-src-5.3.2"],
