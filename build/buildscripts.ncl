@@ -3,27 +3,27 @@
     type = "text",
     artifact_kind = "build-script",
     outputs = ["buildscript-autotools"],
-    source = import "scripts/build/autotools.sh" as 'Text,
+    source = import "autotools.sh" as 'Text,
   },
 
   "buildscript-cmake" = {
     type = "text",
     artifact_kind = "build-script",
     outputs = ["buildscript-cmake"],
-    source = import "scripts/build/cmake.sh" as 'Text,
+    source = import "cmake.sh" as 'Text,
   },
 
   "buildscript-gnu-make" = {
     type = "text",
     artifact_kind = "build-script",
     outputs = ["buildscript-gnu-make"],
-    source = import "scripts/build/gnu-make.sh" as 'Text,
+    source = import "gnu-make.sh" as 'Text,
   },
 
   "buildscript-meson" = {
     type = "text",
     artifact_kind = "build-script",
     outputs = ["buildscript-meson"],
-    source = import "scripts/build/meson.sh" as 'Text,
+    source = import "meson.sh" as 'Text,
   },
 }

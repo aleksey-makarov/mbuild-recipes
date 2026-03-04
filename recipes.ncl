@@ -8,7 +8,7 @@ let recipe_sets = [
   import "bc.ncl",
   import "binutils.ncl",
   import "bison.ncl",
-  import "buildscripts.ncl",
+  import "build/buildscripts.ncl",
   import "bzip2.ncl",
   import "coreutils.ncl",
   import "d-bus.ncl",
