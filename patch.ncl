@@ -1,4 +1,9 @@
 {
+  "patch-2.8" = {
+    type = "binary",
+    inputs = ["patch-src-2.8", "buildscript-autotools"],
+    outputs = ["patch-2.8"],
+  },
   "patch-src-2.8" = {
     type = "fetch",
     outputs = ["patch-src-2.8"],

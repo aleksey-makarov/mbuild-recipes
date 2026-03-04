@@ -1,4 +1,9 @@
 {
+  "readline-8.3" = {
+    type = "binary",
+    inputs = ["readline-src-8.3", "buildscript-autotools"],
+    outputs = ["readline-8.3"],
+  },
   "readline-src-8.3" = {
     type = "fetch",
     outputs = ["readline-src-8.3"],

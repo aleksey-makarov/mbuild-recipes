@@ -1,4 +1,9 @@
 {
+  "ncurses-6.5-20250809" = {
+    type = "binary",
+    inputs = ["ncurses-src-6.5-20250809", "buildscript-autotools"],
+    outputs = ["ncurses-6.5-20250809"],
+  },
   "ncurses-src-6.5-20250809" = {
     type = "fetch",
     outputs = ["ncurses-src-6.5-20250809"],

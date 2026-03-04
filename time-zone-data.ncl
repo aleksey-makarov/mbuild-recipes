@@ -1,4 +1,10 @@
 {
+  "time-zone-data-2025b" = {
+    type = "binary",
+    status = "data package; no generic data/install buildscript yet",
+    inputs = ["time-zone-data-src-2025b"],
+    outputs = ["time-zone-data-2025b"],
+  },
   "time-zone-data-src-2025b" = {
     type = "fetch",
     outputs = ["time-zone-data-src-2025b"],

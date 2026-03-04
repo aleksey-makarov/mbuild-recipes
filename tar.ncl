@@ -1,4 +1,9 @@
 {
+  "tar-1.35" = {
+    type = "binary",
+    inputs = ["tar-src-1.35", "buildscript-autotools"],
+    outputs = ["tar-1.35"],
+  },
   "tar-src-1.35" = {
     type = "fetch",
     outputs = ["tar-src-1.35"],

@@ -1,4 +1,9 @@
 {
+  "libtool-2.5.4" = {
+    type = "binary",
+    inputs = ["libtool-src-2.5.4", "buildscript-autotools"],
+    outputs = ["libtool-2.5.4"],
+  },
   "libtool-src-2.5.4" = {
     type = "fetch",
     outputs = ["libtool-src-2.5.4"],

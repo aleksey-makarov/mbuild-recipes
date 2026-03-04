@@ -1,4 +1,9 @@
 {
+  "pkgconf-2.5.1" = {
+    type = "binary",
+    inputs = ["pkgconf-src-2.5.1", "buildscript-meson"],
+    outputs = ["pkgconf-2.5.1"],
+  },
   "pkgconf-src-2.5.1" = {
     type = "fetch",
     outputs = ["pkgconf-src-2.5.1"],

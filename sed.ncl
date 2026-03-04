@@ -1,4 +1,9 @@
 {
+  "sed-4.9" = {
+    type = "binary",
+    inputs = ["sed-src-4.9", "buildscript-autotools"],
+    outputs = ["sed-4.9"],
+  },
   "sed-src-4.9" = {
     type = "fetch",
     outputs = ["sed-src-4.9"],

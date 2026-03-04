@@ -1,4 +1,10 @@
 {
+  "kmod-34.2" = {
+    type = "binary",
+    status = "build failed: meson requires scdoc program (man/meson.build)",
+    inputs = ["kmod-src-34.2", "buildscript-meson"],
+    outputs = ["kmod-34.2"],
+  },
   "kmod-src-34.2" = {
     type = "fetch",
     outputs = ["kmod-src-34.2"],

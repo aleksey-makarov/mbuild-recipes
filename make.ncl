@@ -1,4 +1,9 @@
 {
+  "make-4.4.1" = {
+    type = "binary",
+    inputs = ["make-src-4.4.1", "buildscript-autotools"],
+    outputs = ["make-4.4.1"],
+  },
   "make-src-4.4.1" = {
     type = "fetch",
     outputs = ["make-src-4.4.1"],

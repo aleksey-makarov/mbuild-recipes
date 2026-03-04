@@ -1,4 +1,9 @@
 {
+  "m4-1.4.20" = {
+    type = "binary",
+    inputs = ["m4-src-1.4.20", "buildscript-autotools"],
+    outputs = ["m4-1.4.20"],
+  },
   "m4-src-1.4.20" = {
     type = "fetch",
     outputs = ["m4-src-1.4.20"],

@@ -1,4 +1,9 @@
 {
+  "zlib-1.3.1" = {
+    type = "binary",
+    inputs = ["zlib-src-1.3.1", "buildscript-autotools"],
+    outputs = ["zlib-1.3.1"],
+  },
   "zlib-src-1.3.1" = {
     type = "fetch",
     outputs = ["zlib-src-1.3.1"],

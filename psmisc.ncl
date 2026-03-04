@@ -1,4 +1,10 @@
 {
+  "psmisc-23.7" = {
+    type = "binary",
+    status = "source fetch failed: sourceforge URL returns hash-mismatched payload",
+    inputs = ["psmisc-src-23.7", "buildscript-autotools"],
+    outputs = ["psmisc-23.7"],
+  },
   "psmisc-src-23.7" = {
     type = "fetch",
     outputs = ["psmisc-src-23.7"],

@@ -1,4 +1,9 @@
 {
+  "libcap-2.76" = {
+    type = "binary",
+    inputs = ["libcap-src-2.76", "buildscript-gnu-make"],
+    outputs = ["libcap-2.76"],
+  },
   "libcap-src-2.76" = {
     type = "fetch",
     outputs = ["libcap-src-2.76"],

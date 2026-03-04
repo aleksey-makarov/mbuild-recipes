@@ -1,4 +1,9 @@
 {
+  "libpipeline-1.5.8" = {
+    type = "binary",
+    inputs = ["libpipeline-src-1.5.8", "buildscript-autotools"],
+    outputs = ["libpipeline-1.5.8"],
+  },
   "libpipeline-src-1.5.8" = {
     type = "fetch",
     outputs = ["libpipeline-src-1.5.8"],

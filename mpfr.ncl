@@ -1,4 +1,9 @@
 {
+  "mpfr-4.2.2" = {
+    type = "binary",
+    inputs = ["mpfr-src-4.2.2", "buildscript-autotools"],
+    outputs = ["mpfr-4.2.2"],
+  },
   "mpfr-src-4.2.2" = {
     type = "fetch",
     outputs = ["mpfr-src-4.2.2"],

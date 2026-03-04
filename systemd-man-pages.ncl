@@ -1,4 +1,10 @@
 {
+  "systemd-man-pages-257.8" = {
+    type = "binary",
+    status = "docs package; no generic docs/install buildscript yet",
+    inputs = ["systemd-man-pages-src-257.8"],
+    outputs = ["systemd-man-pages-257.8"],
+  },
   "systemd-man-pages-src-257.8" = {
     type = "fetch",
     outputs = ["systemd-man-pages-src-257.8"],

@@ -1,4 +1,10 @@
 {
+  "xml-parser-2.47" = {
+    type = "binary",
+    status = "no generic perl-module buildscript yet",
+    inputs = ["xml-parser-src-2.47"],
+    outputs = ["xml-parser-2.47"],
+  },
   "xml-parser-src-2.47" = {
     type = "fetch",
     outputs = ["xml-parser-src-2.47"],
