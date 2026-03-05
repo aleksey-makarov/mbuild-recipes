@@ -19,6 +19,11 @@ let ArgsContract = {
   install | String | optional,
   install_args | Array String | optional,
   env | { _ | String } | optional,
+  prepend_path | Array String | optional,
+  prepend_pkg_config_path | Array String | optional,
+  prepend_cflags | Array String | optional,
+  prepend_cppflags | Array String | optional,
+  prepend_ldflags | Array String | optional,
   in_source | Bool | optional,
   build_dir | String | optional,
   autoreconf | Bool | optional,
@@ -47,6 +52,11 @@ in
     let install = get_or "install" "make" in
     let install_args = get_or "install_args" ["install"] in
     let env = get_or "env" {} in
+    let prepend_path = get_or "prepend_path" [] in
+    let prepend_pkg_config_path = get_or "prepend_pkg_config_path" [] in
+    let prepend_cflags = get_or "prepend_cflags" [] in
+    let prepend_cppflags = get_or "prepend_cppflags" [] in
+    let prepend_ldflags = get_or "prepend_ldflags" [] in
     let in_source = get_or "in_source" true in
     let build_dir = get_or "build_dir" "build" in
     let autoreconf = get_or "autoreconf" false in
@@ -70,6 +80,51 @@ in
       std.array.map
         (fun key => "export " ++ key ++ "=" ++ shell_quote (std.record.get key env))
         (std.record.fields env)
+    in
+    let prepend_lines = std.array.concat
+      (std.array.concat
+        (if prepend_path == [] then
+          []
+        else
+          [
+            "export PATH="
+              ++ shell_quote (std.string.join ":" prepend_path)
+              ++ ":\"${PATH:-}\"",
+          ])
+        (if prepend_pkg_config_path == [] then
+          []
+        else
+          [
+            "export PKG_CONFIG_PATH="
+              ++ shell_quote (std.string.join ":" prepend_pkg_config_path)
+              ++ ":\"${PKG_CONFIG_PATH:-}\"",
+          ]))
+      (std.array.concat
+        (if prepend_cflags == [] then
+          []
+        else
+          [
+            "export CFLAGS="
+              ++ shell_quote (std.string.join " " prepend_cflags)
+              ++ "\"${CFLAGS:+ ${CFLAGS}}\"",
+          ])
+        (std.array.concat
+          (if prepend_cppflags == [] then
+            []
+          else
+            [
+              "export CPPFLAGS="
+                ++ shell_quote (std.string.join " " prepend_cppflags)
+                ++ "\"${CPPFLAGS:+ ${CPPFLAGS}}\"",
+            ])
+          (if prepend_ldflags == [] then
+            []
+          else
+            [
+              "export LDFLAGS="
+                ++ shell_quote (std.string.join " " prepend_ldflags)
+                ++ "\"${LDFLAGS:+ ${LDFLAGS}}\"",
+            ])))
     in
     let pre_lines = if pre_configure == "" then [] else [pre_configure] in
     let post_lines = if post_install == "" then [] else [post_install] in
@@ -149,7 +204,10 @@ in
                     (std.array.concat
                       (std.array.concat
                         (std.array.concat
-                          (std.array.concat base_lines env_lines)
+                          (std.array.concat
+                            (std.array.concat base_lines prepend_lines)
+                            env_lines
+                          )
                           configure_search_lines
                         )
                         autoreconf_lines
