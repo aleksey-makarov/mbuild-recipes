@@ -5,6 +5,25 @@
     outputs = ["bash-5.3"],
   },
 
+  "bash-static-5.3" = {
+    type = "binary",
+    inputs = ["bash-src-5.3"],
+    outputs = ["bash-static-5.3"],
+    script =
+      m%"
+      #!/usr/bin/env bash
+      set -euo pipefail
+      src="/in/bash-src-5.3"
+      out="/out/bash-static-5.3"
+      cd "$src"
+      rm -f config.cache
+      CFLAGS="-O2 -static" LDFLAGS="-static" \
+        ./configure --prefix="$out"
+      make -j"$(nproc)"
+      make install
+      "%,
+  },
+
   "bash-src-5.3" = {
     type = "fetch",
     outputs = ["bash-src-5.3"],

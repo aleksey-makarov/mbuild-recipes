@@ -5,6 +5,7 @@ let recipe_sets = [
   import "autoconf.ncl",
   import "automake.ncl",
   import "bash.ncl",
+  import "bash-image.ncl",
   import "bc.ncl",
   import "binutils.ncl",
   import "bison.ncl",
