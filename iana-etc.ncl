@@ -1,14 +1,20 @@
 {
+  "buildscript-iana-etc-20250807" = {
+    type = "text",
+    artifact_kind = "build-script",
+    outputs = ["buildscript-iana-etc-20250807"],
+    source = m%"
+      #!/bin/sh
+      echo \"TODO: migrate this recipe to buildscript-*\" >&2
+      exit 1
+    "%,
+  },
+
   "iana-etc-20250807" = {
     type = "binary",
     status = "missing dependency: dedicated buildscript artifact for iana-etc packaging",
-    inputs = ["iana-etc-src-20250807"],
+    inputs = ["iana-etc-src-20250807", "buildscript-iana-etc-20250807"],
     outputs = ["iana-etc-20250807"],
-    script = m%"
-      #!/bin/sh
-      echo "TODO: migrate this recipe to buildscript-*" >&2
-      exit 1
-    "%,
   },
 
   "iana-etc-src-20250807" = {

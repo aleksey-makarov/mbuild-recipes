@@ -1,15 +1,25 @@
 {
+  "coreutils-src-9.7" = {
+    type = "fetch",
+    outputs = ["coreutils-src-9.7"],
+    url = [
+      "https://ftp.gnu.org/gnu/coreutils/coreutils-9.7.tar.xz",
+      "https://mirrors.kernel.org/gnu/coreutils/coreutils-9.7.tar.xz",
+    ],
+    hash = "md5:6b7285faf7d5eb91592bdd689270d3f1",
+  },
+
   "coreutils-9.7" = {
     type = "binary",
     inputs = ["coreutils-src-9.7", "buildscript-autotools"],
     outputs = ["coreutils-9.7"],
   },
 
-  "coreutils-static-9.7" = {
-    type = "binary",
-    inputs = ["coreutils-src-9.7"],
-    outputs = ["coreutils-static-9.7"],
-    script =
+  "buildscript-coreutils-static-9.7" = {
+    type = "text",
+    artifact_kind = "build-script",
+    outputs = ["buildscript-coreutils-static-9.7"],
+    source =
       m%"
       #!/usr/bin/env bash
       set -euo pipefail
@@ -27,13 +37,10 @@
       "%,
   },
 
-  "coreutils-src-9.7" = {
-    type = "fetch",
-    outputs = ["coreutils-src-9.7"],
-    url = [
-      "https://ftp.gnu.org/gnu/coreutils/coreutils-9.7.tar.xz",
-      "https://mirrors.kernel.org/gnu/coreutils/coreutils-9.7.tar.xz",
-    ],
-    hash = "md5:6b7285faf7d5eb91592bdd689270d3f1",
+  "coreutils-static-9.7" = {
+    type = "binary",
+    inputs = ["coreutils-src-9.7", "buildscript-coreutils-static-9.7"],
+    outputs = ["coreutils-static-9.7"],
   },
+
 }
