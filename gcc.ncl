@@ -11,9 +11,9 @@
         "--with-sysroot=/out/gcc-pass1-15.2.0",
         "--with-newlib",
         "--without-headers",
-        "--with-gmp=/in/gmp-6.3.0",
-        "--with-mpfr=/in/mpfr-4.2.2",
-        "--with-mpc=/in/mpc-1.3.1",
+        "--with-gmp=/usr",
+        "--with-mpfr=/usr",
+        "--with-mpc=/usr",
         "--enable-default-pie",
         "--enable-default-ssp",
         "--disable-nls",
@@ -41,16 +41,19 @@
         "%,
     },
 
+  "bootstrap-with-gmp-mpfr-mpc-image-6.3.0-4.2.2-1.3.1" = {
+    type = "image",
+    inputs = ["bootstrap-binary-image", "gmp-6.3.0", "mpfr-4.2.2", "mpc-1.3.1"],
+    outputs = ["bootstrap-with-gmp-mpfr-mpc-image-6.3.0-4.2.2-1.3.1"],
+  },
+
   "gcc-pass1-15.2.0" = {
     type = "binary",
     inputs = [
       "gcc-src-15.2.0",
       "binutils-pass1-2.45",
-      "gmp-6.3.0",
-      "mpfr-4.2.2",
-      "mpc-1.3.1",
       "buildscript-gcc-pass1-15.2.0",
-      "bootstrap-binary-image",
+      "bootstrap-with-gmp-mpfr-mpc-image-6.3.0-4.2.2-1.3.1",
     ],
     outputs = ["gcc-pass1-15.2.0"],
   },
