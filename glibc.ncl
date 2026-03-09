@@ -65,18 +65,6 @@
       jobs="$(getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)"
       make -j"${jobs}"
       make DESTDIR="/out/${out}" install
-
-      case $(uname -m) in
-        i?86)
-          mkdir -p "/out/${out}/lib"
-          ln -sfv ld-linux.so.2 "/out/${out}/lib/ld-lsb.so.3"
-          ;;
-        x86_64)
-          mkdir -p "/out/${out}/lib64"
-          ln -sfv ../lib/ld-linux-x86-64.so.2 "/out/${out}/lib64"
-          ln -sfv ../lib/ld-linux-x86-64.so.2 "/out/${out}/lib64/ld-lsb-x86-64.so.3"
-          ;;
-      esac
       "%,
   },
 
