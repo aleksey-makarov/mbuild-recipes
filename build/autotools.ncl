@@ -12,6 +12,7 @@ in
 
 let ArgsContract = {
   output | String,
+  prefix | String | optional,
   configure | String | optional,
   configure_args | Array String | optional,
   make | String | optional,
@@ -45,6 +46,7 @@ in
           fallback
     in
     let output = std.record.get "output" cfg in
+    let prefix = get_or "prefix" "/usr" in
     let configure = get_or "configure" "./configure" in
     let configure_args = get_or "configure_args" [] in
     let make = get_or "make" "make" in
@@ -72,10 +74,15 @@ in
         else
           configure
       in
-      append_args (configure_program ++ " --prefix=\"/out/${out}\"") configure_args
+      append_args (configure_program ++ " --prefix=" ++ shell_quote prefix) configure_args
     in
     let make_cmd = append_args make make_args ++ " -j\"$jobs\"" in
-    let install_cmd = append_args install install_args in
+    let install_cmd =
+      if std.record.has_field "install_args" cfg then
+        append_args install install_args
+      else
+        install ++ " DESTDIR=\"/out/${out}\" install"
+    in
     let env_lines =
       std.array.map
         (fun key => "export " ++ key ++ "=" ++ shell_quote (std.record.get key env))

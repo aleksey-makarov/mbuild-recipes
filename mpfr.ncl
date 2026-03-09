@@ -4,6 +4,13 @@
     inputs = ["mpfr-src-4.2.2", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["mpfr-4.2.2"],
   },
+
+  "bootstrap-with-mpfr-image-4.2.2" = {
+    type = "image",
+    inputs = ["bootstrap-binary-image", "mpfr-4.2.2"],
+    outputs = ["bootstrap-with-mpfr-image-4.2.2"],
+  },
+
   "mpfr-src-4.2.2" = {
     type = "fetch",
     outputs = ["mpfr-src-4.2.2"],

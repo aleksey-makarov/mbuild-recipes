@@ -1,10 +1,9 @@
+let autotools = import "autotools.ncl" in
 {
-  "buildscript-autotools" = {
-    type = "text",
-    artifact_kind = "build-script",
-    outputs = ["buildscript-autotools"],
-    source = import "autotools.sh" as 'Text,
-  },
+  "buildscript-autotools" =
+    autotools.autotools {
+      output = "buildscript-autotools",
+    },
 
   "buildscript-cmake" = {
     type = "text",
