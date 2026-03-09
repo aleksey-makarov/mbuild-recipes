@@ -2,7 +2,7 @@
   "time-zone-data-2025b" = {
     type = "binary",
     status = "data package; no generic data/install buildscript yet",
-    inputs = ["time-zone-data-src-2025b"],
+    inputs = ["time-zone-data-src-2025b", "bootstrap-binary-image"],
     outputs = ["time-zone-data-2025b"],
   },
   "time-zone-data-src-2025b" = {

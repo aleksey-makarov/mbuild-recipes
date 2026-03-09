@@ -2,7 +2,7 @@
   "man-db-2.13.1" = {
     type = "binary",
     status = "build failed: configure cannot find libpipeline via pkg-config (needs dependency wiring)",
-    inputs = ["man-db-src-2.13.1", "buildscript-autotools"],
+    inputs = ["man-db-src-2.13.1", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["man-db-2.13.1"],
   },
   "man-db-src-2.13.1" = {

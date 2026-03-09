@@ -2,7 +2,7 @@
   "man-pages-6.15" = {
     type = "binary",
     status = "docs package; no generic docs/install buildscript yet",
-    inputs = ["man-pages-src-6.15"],
+    inputs = ["man-pages-src-6.15", "bootstrap-binary-image"],
     outputs = ["man-pages-6.15"],
   },
   "man-pages-src-6.15" = {

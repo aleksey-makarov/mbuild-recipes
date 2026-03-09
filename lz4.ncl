@@ -1,7 +1,7 @@
 {
   "lz4-1.10.0" = {
     type = "binary",
-    inputs = ["lz4-src-1.10.0", "buildscript-gnu-make"],
+    inputs = ["lz4-src-1.10.0", "buildscript-gnu-make", "bootstrap-binary-image"],
     outputs = ["lz4-1.10.0"],
   },
 

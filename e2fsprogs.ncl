@@ -2,7 +2,7 @@
   "e2fsprogs-1.47.3" = {
     type = "binary",
     status = "missing dedicated buildscript config: install tries to write /etc/cron.d on container root",
-    inputs = ["e2fsprogs-src-1.47.3", "buildscript-autotools"],
+    inputs = ["e2fsprogs-src-1.47.3", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["e2fsprogs-1.47.3"],
   },
 

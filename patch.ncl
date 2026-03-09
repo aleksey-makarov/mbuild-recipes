@@ -1,7 +1,7 @@
 {
   "patch-2.8" = {
     type = "binary",
-    inputs = ["patch-src-2.8", "buildscript-autotools"],
+    inputs = ["patch-src-2.8", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["patch-2.8"],
   },
   "patch-src-2.8" = {

@@ -11,7 +11,7 @@
 
   "coreutils-9.7" = {
     type = "binary",
-    inputs = ["coreutils-src-9.7", "buildscript-autotools"],
+    inputs = ["coreutils-src-9.7", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["coreutils-9.7"],
   },
 
@@ -19,8 +19,7 @@
     type = "text",
     artifact_kind = "build-script",
     outputs = ["buildscript-coreutils-static-9.7"],
-    source =
-      m%"
+    source = m%"
       #!/usr/bin/env bash
       set -euo pipefail
       src="/in/coreutils-src-9.7"
@@ -39,8 +38,7 @@
 
   "coreutils-static-9.7" = {
     type = "binary",
-    inputs = ["coreutils-src-9.7", "buildscript-coreutils-static-9.7"],
+    inputs = ["coreutils-src-9.7", "buildscript-coreutils-static-9.7", "bootstrap-binary-image"],
     outputs = ["coreutils-static-9.7"],
   },
-
 }

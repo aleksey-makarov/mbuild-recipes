@@ -1,7 +1,7 @@
 {
   "mpfr-4.2.2" = {
     type = "binary",
-    inputs = ["mpfr-src-4.2.2", "buildscript-autotools"],
+    inputs = ["mpfr-src-4.2.2", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["mpfr-4.2.2"],
   },
   "mpfr-src-4.2.2" = {

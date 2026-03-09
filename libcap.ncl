@@ -1,7 +1,7 @@
 {
   "libcap-2.76" = {
     type = "binary",
-    inputs = ["libcap-src-2.76", "buildscript-gnu-make"],
+    inputs = ["libcap-src-2.76", "buildscript-gnu-make", "bootstrap-binary-image"],
     outputs = ["libcap-2.76"],
   },
   "libcap-src-2.76" = {

@@ -11,7 +11,7 @@
 
   "bash-5.3" = {
     type = "binary",
-    inputs = ["bash-src-5.3", "buildscript-autotools"],
+    inputs = ["bash-src-5.3", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["bash-5.3"],
   },
 
@@ -19,8 +19,7 @@
     type = "text",
     artifact_kind = "build-script",
     outputs = ["buildscript-bash-static-5.3"],
-    source =
-      m%"
+    source = m%"
       #!/usr/bin/env bash
       set -euo pipefail
       src="/in/bash-src-5.3"
@@ -36,8 +35,7 @@
 
   "bash-static-5.3" = {
     type = "binary",
-    inputs = ["bash-src-5.3", "buildscript-bash-static-5.3"],
+    inputs = ["bash-src-5.3", "buildscript-bash-static-5.3", "bootstrap-binary-image"],
     outputs = ["bash-static-5.3"],
   },
-
 }

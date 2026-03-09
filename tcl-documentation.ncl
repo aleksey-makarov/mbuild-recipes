@@ -2,7 +2,7 @@
   "tcl-documentation-8.6.16" = {
     type = "binary",
     status = "source fetch failed: sourceforge URL returns hash-mismatched payload (docs buildscript still not defined)",
-    inputs = ["tcl-documentation-src-8.6.16"],
+    inputs = ["tcl-documentation-src-8.6.16", "bootstrap-binary-image"],
     outputs = ["tcl-documentation-8.6.16"],
   },
   "tcl-documentation-src-8.6.16" = {

@@ -1,7 +1,7 @@
 {
   "groff-1.23.0" = {
     type = "binary",
-    inputs = ["groff-src-1.23.0", "buildscript-autotools"],
+    inputs = ["groff-src-1.23.0", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["groff-1.23.0"],
   },
 

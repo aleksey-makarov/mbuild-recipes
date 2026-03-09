@@ -1,7 +1,7 @@
 {
   "less-679" = {
     type = "binary",
-    inputs = ["less-src-679", "buildscript-autotools"],
+    inputs = ["less-src-679", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["less-679"],
   },
   "less-src-679" = {

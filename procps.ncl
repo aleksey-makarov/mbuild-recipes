@@ -2,7 +2,7 @@
   "procps-4.0.5" = {
     type = "binary",
     status = "source fetch failed: sourceforge URL returns hash-mismatched payload",
-    inputs = ["procps-src-4.0.5", "buildscript-meson"],
+    inputs = ["procps-src-4.0.5", "buildscript-meson", "bootstrap-binary-image"],
     outputs = ["procps-4.0.5"],
   },
   "procps-src-4.0.5" = {

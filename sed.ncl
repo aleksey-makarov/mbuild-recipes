@@ -1,7 +1,7 @@
 {
   "sed-4.9" = {
     type = "binary",
-    inputs = ["sed-src-4.9", "buildscript-autotools"],
+    inputs = ["sed-src-4.9", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["sed-4.9"],
   },
   "sed-src-4.9" = {

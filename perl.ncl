@@ -2,7 +2,7 @@
   "perl-5.42.0" = {
     type = "binary",
     status = "no generic perl buildscript yet (Configure/make/install flow)",
-    inputs = ["perl-src-5.42.0"],
+    inputs = ["perl-src-5.42.0", "bootstrap-binary-image"],
     outputs = ["perl-5.42.0"],
   },
   "perl-src-5.42.0" = {

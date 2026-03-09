@@ -2,7 +2,7 @@
   "mpc-1.3.1" = {
     type = "binary",
     status = "build failed: configure cannot find libmpfr (needs mpfr dependency wiring)",
-    inputs = ["mpc-src-1.3.1", "buildscript-autotools"],
+    inputs = ["mpc-src-1.3.1", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["mpc-1.3.1"],
   },
   "mpc-src-1.3.1" = {

@@ -1,7 +1,7 @@
 {
   "gdbm-1.26" = {
     type = "binary",
-    inputs = ["gdbm-src-1.26", "buildscript-autotools"],
+    inputs = ["gdbm-src-1.26", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["gdbm-1.26"],
   },
 

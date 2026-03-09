@@ -1,7 +1,7 @@
 {
   "gzip-1.14" = {
     type = "binary",
-    inputs = ["gzip-src-1.14", "buildscript-autotools"],
+    inputs = ["gzip-src-1.14", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["gzip-1.14"],
   },
 

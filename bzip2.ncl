@@ -1,7 +1,7 @@
 {
   "bzip2-1.0.8" = {
     type = "binary",
-    inputs = ["bzip2-src-1.0.8", "buildscript-gnu-make"],
+    inputs = ["bzip2-src-1.0.8", "buildscript-gnu-make", "bootstrap-binary-image"],
     outputs = ["bzip2-1.0.8"],
   },
 

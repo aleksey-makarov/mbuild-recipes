@@ -2,7 +2,7 @@
   "jinja2-3.1.6" = {
     type = "binary",
     status = "no build-script input (python package build flow/buildscript not implemented yet)",
-    inputs = ["jinja2-src-3.1.6"],
+    inputs = ["jinja2-src-3.1.6", "bootstrap-binary-image"],
     outputs = ["jinja2-3.1.6"],
   },
 

@@ -1,7 +1,7 @@
 {
   "zlib-1.3.1" = {
     type = "binary",
-    inputs = ["zlib-src-1.3.1", "buildscript-autotools"],
+    inputs = ["zlib-src-1.3.1", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["zlib-1.3.1"],
   },
   "zlib-src-1.3.1" = {

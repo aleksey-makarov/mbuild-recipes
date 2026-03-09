@@ -1,7 +1,7 @@
 {
   "gmp-6.3.0" = {
     type = "binary",
-    inputs = ["gmp-src-6.3.0", "buildscript-autotools"],
+    inputs = ["gmp-src-6.3.0", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["gmp-6.3.0"],
   },
 

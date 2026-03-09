@@ -1,7 +1,7 @@
 {
   "libxcrypt-4.4.38" = {
     type = "binary",
-    inputs = ["libxcrypt-src-4.4.38", "buildscript-autotools"],
+    inputs = ["libxcrypt-src-4.4.38", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["libxcrypt-4.4.38"],
   },
 

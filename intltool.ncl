@@ -2,7 +2,7 @@
   "intltool-0.51.0" = {
     type = "binary",
     status = "configure requires perl XML::Parser module (missing in build image)",
-    inputs = ["intltool-src-0.51.0", "buildscript-autotools"],
+    inputs = ["intltool-src-0.51.0", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["intltool-0.51.0"],
   },
 

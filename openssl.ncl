@@ -13,7 +13,7 @@
   "openssl-3.5.2" = {
     type = "binary",
     status = "missing dependency: dedicated OpenSSL buildscript artifact",
-    inputs = ["openssl-src-3.5.2", "buildscript-openssl-3.5.2"],
+    inputs = ["openssl-src-3.5.2", "buildscript-openssl-3.5.2", "bootstrap-binary-image"],
     outputs = ["openssl-3.5.2"],
   },
 

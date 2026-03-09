@@ -1,7 +1,7 @@
 {
   "m4-1.4.20" = {
     type = "binary",
-    inputs = ["m4-src-1.4.20", "buildscript-autotools"],
+    inputs = ["m4-src-1.4.20", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["m4-1.4.20"],
   },
   "m4-src-1.4.20" = {

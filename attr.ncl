@@ -1,7 +1,7 @@
 {
   "attr-2.5.2" = {
     type = "binary",
-    inputs = ["attr-src-2.5.2", "buildscript-autotools"],
+    inputs = ["attr-src-2.5.2", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["attr-2.5.2"],
   },
 

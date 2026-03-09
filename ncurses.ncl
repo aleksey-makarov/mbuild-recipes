@@ -1,7 +1,7 @@
 {
   "ncurses-6.5-20250809" = {
     type = "binary",
-    inputs = ["ncurses-src-6.5-20250809", "buildscript-autotools"],
+    inputs = ["ncurses-src-6.5-20250809", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["ncurses-6.5-20250809"],
   },
   "ncurses-src-6.5-20250809" = {

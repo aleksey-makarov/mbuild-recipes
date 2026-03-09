@@ -1,7 +1,7 @@
 {
   "libpipeline-1.5.8" = {
     type = "binary",
-    inputs = ["libpipeline-src-1.5.8", "buildscript-autotools"],
+    inputs = ["libpipeline-src-1.5.8", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["libpipeline-1.5.8"],
   },
   "libpipeline-src-1.5.8" = {

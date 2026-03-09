@@ -2,7 +2,7 @@
   "ninja-1.13.1" = {
     type = "binary",
     status = "missing dependency artifact: googletest source (required for offline build)",
-    inputs = ["ninja-src-1.13.1", "buildscript-cmake"],
+    inputs = ["ninja-src-1.13.1", "buildscript-cmake", "bootstrap-binary-image"],
     outputs = ["ninja-1.13.1"],
   },
 

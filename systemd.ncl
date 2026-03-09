@@ -2,7 +2,7 @@
   "systemd-257.8" = {
     type = "binary",
     status = "missing build dependencies: gperf, libcap-dev",
-    inputs = ["systemd-src-257.8", "buildscript-meson"],
+    inputs = ["systemd-src-257.8", "buildscript-meson", "bootstrap-binary-image"],
     outputs = ["systemd-257.8"],
   },
 

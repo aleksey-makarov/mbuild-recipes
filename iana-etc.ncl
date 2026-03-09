@@ -13,7 +13,7 @@
   "iana-etc-20250807" = {
     type = "binary",
     status = "missing dependency: dedicated buildscript artifact for iana-etc packaging",
-    inputs = ["iana-etc-src-20250807", "buildscript-iana-etc-20250807"],
+    inputs = ["iana-etc-src-20250807", "buildscript-iana-etc-20250807", "bootstrap-binary-image"],
     outputs = ["iana-etc-20250807"],
   },
 

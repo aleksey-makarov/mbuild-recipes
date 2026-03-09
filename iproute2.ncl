@@ -1,7 +1,7 @@
 {
   "iproute2-6.16.0" = {
     type = "binary",
-    inputs = ["iproute2-src-6.16.0", "buildscript-gnu-make"],
+    inputs = ["iproute2-src-6.16.0", "buildscript-gnu-make", "bootstrap-binary-image"],
     outputs = ["iproute2-6.16.0"],
   },
 

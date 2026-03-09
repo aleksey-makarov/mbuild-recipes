@@ -2,7 +2,7 @@
   "expect-5.45.4" = {
     type = "binary",
     status = "source fetch hash mismatch from SourceForge mirror response; needs stable mirror URL",
-    inputs = ["expect-src-5.45.4", "buildscript-autotools"],
+    inputs = ["expect-src-5.45.4", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["expect-5.45.4"],
   },
 

@@ -1,7 +1,7 @@
 {
   "tar-1.35" = {
     type = "binary",
-    inputs = ["tar-src-1.35", "buildscript-autotools"],
+    inputs = ["tar-src-1.35", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["tar-1.35"],
   },
   "tar-src-1.35" = {

@@ -2,7 +2,7 @@
   "shadow-4.18.0" = {
     type = "binary",
     status = "missing build dependencies: autopoint, xsltproc",
-    inputs = ["shadow-src-4.18.0", "buildscript-autotools"],
+    inputs = ["shadow-src-4.18.0", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["shadow-4.18.0"],
   },
 

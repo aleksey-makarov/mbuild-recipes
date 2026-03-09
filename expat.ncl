@@ -1,7 +1,7 @@
 {
   "expat-2.7.1" = {
     type = "binary",
-    inputs = ["expat-src-2.7.1", "buildscript-cmake"],
+    inputs = ["expat-src-2.7.1", "buildscript-cmake", "bootstrap-binary-image"],
     outputs = ["expat-2.7.1"],
   },
 

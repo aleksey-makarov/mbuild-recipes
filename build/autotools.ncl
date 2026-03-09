@@ -81,50 +81,67 @@ in
         (fun key => "export " ++ key ++ "=" ++ shell_quote (std.record.get key env))
         (std.record.fields env)
     in
-    let prepend_lines = std.array.concat
-      (std.array.concat
-        (if prepend_path == [] then
-          []
-        else
-          [
-            "export PATH="
-              ++ shell_quote (std.string.join ":" prepend_path)
-              ++ ":\"${PATH:-}\"",
-          ])
-        (if prepend_pkg_config_path == [] then
-          []
-        else
-          [
-            "export PKG_CONFIG_PATH="
-              ++ shell_quote (std.string.join ":" prepend_pkg_config_path)
-              ++ ":\"${PKG_CONFIG_PATH:-}\"",
-          ]))
-      (std.array.concat
-        (if prepend_cflags == [] then
-          []
-        else
-          [
-            "export CFLAGS="
-              ++ shell_quote (std.string.join " " prepend_cflags)
-              ++ "\"${CFLAGS:+ ${CFLAGS}}\"",
-          ])
-        (std.array.concat
-          (if prepend_cppflags == [] then
-            []
-          else
-            [
-              "export CPPFLAGS="
-                ++ shell_quote (std.string.join " " prepend_cppflags)
-                ++ "\"${CPPFLAGS:+ ${CPPFLAGS}}\"",
-            ])
-          (if prepend_ldflags == [] then
-            []
-          else
-            [
-              "export LDFLAGS="
-                ++ shell_quote (std.string.join " " prepend_ldflags)
-                ++ "\"${LDFLAGS:+ ${LDFLAGS}}\"",
-            ])))
+    let prepend_lines =
+      std.array.concat
+        (
+          std.array.concat
+            (
+              if prepend_path == [] then
+                []
+              else
+                [
+                  "export PATH="
+                  ++ shell_quote (std.string.join ":" prepend_path)
+                  ++ ":\"${PATH:-}\"",
+                ]
+            )
+            (
+              if prepend_pkg_config_path == [] then
+                []
+              else
+                [
+                  "export PKG_CONFIG_PATH="
+                  ++ shell_quote (std.string.join ":" prepend_pkg_config_path)
+                  ++ ":\"${PKG_CONFIG_PATH:-}\"",
+                ]
+            )
+        )
+        (
+          std.array.concat
+            (
+              if prepend_cflags == [] then
+                []
+              else
+                [
+                  "export CFLAGS="
+                  ++ shell_quote (std.string.join " " prepend_cflags)
+                  ++ "\"${CFLAGS:+ ${CFLAGS}}\"",
+                ]
+            )
+            (
+              std.array.concat
+                (
+                  if prepend_cppflags == [] then
+                    []
+                  else
+                    [
+                      "export CPPFLAGS="
+                      ++ shell_quote (std.string.join " " prepend_cppflags)
+                      ++ "\"${CPPFLAGS:+ ${CPPFLAGS}}\"",
+                    ]
+                )
+                (
+                  if prepend_ldflags == [] then
+                    []
+                  else
+                    [
+                      "export LDFLAGS="
+                      ++ shell_quote (std.string.join " " prepend_ldflags)
+                      ++ "\"${LDFLAGS:+ ${LDFLAGS}}\"",
+                    ]
+                )
+            )
+        )
     in
     let pre_lines = if pre_configure == "" then [] else [pre_configure] in
     let post_lines = if post_install == "" then [] else [post_install] in
@@ -137,7 +154,8 @@ in
       "",
       "cd \"/in/${src}\"",
       "",
-    ] in
+    ]
+    in
     let configure_search_lines = [
       "if [ ! -x ./configure ]; then",
       "  candidates=\"\"",
@@ -153,7 +171,8 @@ in
       "  fi",
       "fi",
       "",
-    ] in
+    ]
+    in
     let autoreconf_lines =
       if autoreconf then
         [
@@ -171,7 +190,8 @@ in
       "  exit 1",
       "fi",
       "",
-    ] in
+    ]
+    in
     let build_dir_lines =
       if in_source then
         []
@@ -184,41 +204,51 @@ in
     in
     let build_lines = [
       "jobs=\"$(getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)\"",
-    ] in
+    ]
+    in
     let command_lines = [
       configure_cmd,
       make_cmd,
       install_cmd,
-    ] in
+    ]
+    in
     {
       type = "text",
       artifact_kind = "build-script",
       outputs = [output],
       source =
-        std.string.join "\n"
+        std.string.join
+          "\n"
           (
             std.array.concat
-              (std.array.concat
-                (std.array.concat
-                  (std.array.concat
-                    (std.array.concat
-                      (std.array.concat
-                        (std.array.concat
-                          (std.array.concat
-                            (std.array.concat base_lines prepend_lines)
-                            env_lines
+              (
+                std.array.concat
+                  (
+                    std.array.concat
+                      (
+                        std.array.concat
+                          (
+                            std.array.concat
+                              (
+                                std.array.concat
+                                  (
+                                    std.array.concat
+                                      (
+                                        std.array.concat
+                                          (std.array.concat base_lines prepend_lines)
+                                          env_lines
+                                      )
+                                      configure_search_lines
+                                  )
+                                  autoreconf_lines
+                              )
+                              configure_check_lines
                           )
-                          configure_search_lines
-                        )
-                        autoreconf_lines
+                          pre_lines
                       )
-                      configure_check_lines
-                    )
-                    pre_lines
+                      build_dir_lines
                   )
-                  build_dir_lines
-                )
-                build_lines
+                  build_lines
               )
               (std.array.concat command_lines post_lines)
           )

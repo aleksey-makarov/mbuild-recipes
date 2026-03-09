@@ -11,6 +11,7 @@ let recipe_sets = [
   import "bison.ncl",
   import "build/buildscripts.ncl",
   import "bzip2.ncl",
+  import "container-images.ncl",
   import "coreutils.ncl",
   import "d-bus.ncl",
   import "dejagnu.ncl",

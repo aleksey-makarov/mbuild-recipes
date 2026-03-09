@@ -1,7 +1,7 @@
 {
   "readline-8.3" = {
     type = "binary",
-    inputs = ["readline-src-8.3", "buildscript-autotools"],
+    inputs = ["readline-src-8.3", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["readline-8.3"],
   },
   "readline-src-8.3" = {

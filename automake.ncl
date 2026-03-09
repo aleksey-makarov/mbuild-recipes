@@ -1,7 +1,7 @@
 {
   "automake-1.18.1" = {
     type = "binary",
-    inputs = ["automake-src-1.18.1", "buildscript-autotools"],
+    inputs = ["automake-src-1.18.1", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["automake-1.18.1"],
   },
 

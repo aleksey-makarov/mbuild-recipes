@@ -1,7 +1,7 @@
 {
   "gawk-5.3.2" = {
     type = "binary",
-    inputs = ["gawk-src-5.3.2", "buildscript-autotools"],
+    inputs = ["gawk-src-5.3.2", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["gawk-5.3.2"],
   },
 

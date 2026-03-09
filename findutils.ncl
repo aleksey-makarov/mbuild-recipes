@@ -1,7 +1,7 @@
 {
   "findutils-4.10.0" = {
     type = "binary",
-    inputs = ["findutils-src-4.10.0", "buildscript-autotools"],
+    inputs = ["findutils-src-4.10.0", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["findutils-4.10.0"],
   },
 

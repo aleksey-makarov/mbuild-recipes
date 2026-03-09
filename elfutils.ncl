@@ -1,7 +1,7 @@
 {
   "elfutils-0.193" = {
     type = "binary",
-    inputs = ["elfutils-src-0.193", "buildscript-autotools"],
+    inputs = ["elfutils-src-0.193", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["elfutils-0.193"],
   },
 

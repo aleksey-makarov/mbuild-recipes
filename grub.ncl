@@ -2,7 +2,7 @@
   "grub-2.12" = {
     type = "binary",
     status = "build failed: missing grub-core/extra_deps.lst in make; needs grub-specific build flow",
-    inputs = ["grub-src-2.12", "buildscript-autotools"],
+    inputs = ["grub-src-2.12", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["grub-2.12"],
   },
   "grub-src-2.12" = {

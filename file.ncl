@@ -1,7 +1,7 @@
 {
   "file-5.46" = {
     type = "binary",
-    inputs = ["file-src-5.46", "buildscript-autotools"],
+    inputs = ["file-src-5.46", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["file-5.46"],
   },
 

@@ -1,7 +1,7 @@
 {
   "grep-3.12" = {
     type = "binary",
-    inputs = ["grep-src-3.12", "buildscript-autotools"],
+    inputs = ["grep-src-3.12", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["grep-3.12"],
   },
 

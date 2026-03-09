@@ -1,7 +1,7 @@
 {
   "vim-9.1.1629" = {
     type = "binary",
-    inputs = ["vim-src-9.1.1629", "buildscript-autotools"],
+    inputs = ["vim-src-9.1.1629", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["vim-9.1.1629"],
   },
 

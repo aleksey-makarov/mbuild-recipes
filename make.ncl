@@ -1,7 +1,7 @@
 {
   "make-4.4.1" = {
     type = "binary",
-    inputs = ["make-src-4.4.1", "buildscript-autotools"],
+    inputs = ["make-src-4.4.1", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["make-4.4.1"],
   },
   "make-src-4.4.1" = {

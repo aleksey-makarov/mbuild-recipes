@@ -1,7 +1,7 @@
 {
   "gettext-0.26" = {
     type = "binary",
-    inputs = ["gettext-src-0.26", "buildscript-autotools"],
+    inputs = ["gettext-src-0.26", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["gettext-0.26"],
   },
 

@@ -1,7 +1,7 @@
 {
   "bison-3.8.2" = {
     type = "binary",
-    inputs = ["bison-src-3.8.2", "buildscript-autotools"],
+    inputs = ["bison-src-3.8.2", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["bison-3.8.2"],
   },
 

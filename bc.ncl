@@ -1,7 +1,7 @@
 {
   "bc-7.0.3" = {
     type = "binary",
-    inputs = ["bc-src-7.0.3", "buildscript-autotools"],
+    inputs = ["bc-src-7.0.3", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["bc-7.0.3"],
   },
 

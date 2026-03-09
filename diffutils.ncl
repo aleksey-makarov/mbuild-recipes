@@ -1,7 +1,7 @@
 {
   "diffutils-3.12" = {
     type = "binary",
-    inputs = ["diffutils-src-3.12", "buildscript-autotools"],
+    inputs = ["diffutils-src-3.12", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["diffutils-3.12"],
   },
 

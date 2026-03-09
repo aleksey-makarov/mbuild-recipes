@@ -1,7 +1,7 @@
 {
   "libffi-3.5.2" = {
     type = "binary",
-    inputs = ["libffi-src-3.5.2", "buildscript-autotools"],
+    inputs = ["libffi-src-3.5.2", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["libffi-3.5.2"],
   },
 

@@ -1,7 +1,7 @@
 {
   "gperf-3.3" = {
     type = "binary",
-    inputs = ["gperf-src-3.3", "buildscript-autotools"],
+    inputs = ["gperf-src-3.3", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["gperf-3.3"],
   },
 

@@ -1,7 +1,7 @@
 {
   "sysklogd-2.7.2" = {
     type = "binary",
-    inputs = ["sysklogd-src-2.7.2", "buildscript-autotools"],
+    inputs = ["sysklogd-src-2.7.2", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["sysklogd-2.7.2"],
   },
 

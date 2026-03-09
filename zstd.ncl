@@ -1,7 +1,7 @@
 {
   "zstd-1.5.7" = {
     type = "binary",
-    inputs = ["zstd-src-1.5.7", "buildscript-gnu-make"],
+    inputs = ["zstd-src-1.5.7", "buildscript-gnu-make", "bootstrap-binary-image"],
     outputs = ["zstd-1.5.7"],
   },
 

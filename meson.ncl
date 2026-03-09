@@ -13,7 +13,7 @@
   "meson-1.8.3" = {
     type = "binary",
     status = "missing dependency: dedicated Meson buildscript artifact",
-    inputs = ["meson-src-1.8.3", "buildscript-meson-1.8.3"],
+    inputs = ["meson-src-1.8.3", "buildscript-meson-1.8.3", "bootstrap-binary-image"],
     outputs = ["meson-1.8.3"],
   },
 

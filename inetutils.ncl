@@ -1,7 +1,7 @@
 {
   "inetutils-2.6" = {
     type = "binary",
-    inputs = ["inetutils-src-2.6", "buildscript-autotools"],
+    inputs = ["inetutils-src-2.6", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["inetutils-2.6"],
   },
 

@@ -1,7 +1,7 @@
 {
   "autoconf-2.72" = {
     type = "binary",
-    inputs = ["autoconf-src-2.72", "buildscript-autotools"],
+    inputs = ["autoconf-src-2.72", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["autoconf-2.72"],
   },
 

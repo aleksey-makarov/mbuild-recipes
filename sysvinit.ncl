@@ -1,7 +1,7 @@
 {
   "sysvinit-3.14" = {
     type = "binary",
-    inputs = ["sysvinit-src-3.14", "buildscript-gnu-make"],
+    inputs = ["sysvinit-src-3.14", "buildscript-gnu-make", "bootstrap-binary-image"],
     outputs = ["sysvinit-3.14"],
   },
 

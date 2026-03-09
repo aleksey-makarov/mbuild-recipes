@@ -2,7 +2,7 @@
   "acl-2.3.2" = {
     type = "binary",
     status = "missing dependency artifact: attr development headers (attr/error_context.h)",
-    inputs = ["acl-src-2.3.2", "buildscript-autotools"],
+    inputs = ["acl-src-2.3.2", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["acl-2.3.2"],
   },
 

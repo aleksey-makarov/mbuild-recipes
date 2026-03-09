@@ -17,7 +17,7 @@
 
   "binutils-pass1-2.45" = {
     type = "binary",
-    inputs = ["binutils-src-2.45", "buildscript-binutils-pass1-2.45"],
+    inputs = ["binutils-src-2.45", "buildscript-binutils-pass1-2.45", "bootstrap-binary-image"],
     outputs = ["binutils-pass1-2.45"],
   },
 

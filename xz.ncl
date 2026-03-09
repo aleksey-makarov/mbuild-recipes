@@ -1,7 +1,7 @@
 {
   "xz-5.8.1" = {
     type = "binary",
-    inputs = ["xz-src-5.8.1", "buildscript-cmake"],
+    inputs = ["xz-src-5.8.1", "buildscript-cmake", "bootstrap-binary-image"],
     outputs = ["xz-5.8.1"],
   },
 

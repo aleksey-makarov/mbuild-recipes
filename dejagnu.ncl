@@ -1,7 +1,7 @@
 {
   "dejagnu-1.6.3" = {
     type = "binary",
-    inputs = ["dejagnu-src-1.6.3", "buildscript-autotools"],
+    inputs = ["dejagnu-src-1.6.3", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["dejagnu-1.6.3"],
   },
 

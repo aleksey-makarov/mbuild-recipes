@@ -1,7 +1,7 @@
 {
   "d-bus-1.16.2" = {
     type = "binary",
-    inputs = ["d-bus-src-1.16.2", "buildscript-meson"],
+    inputs = ["d-bus-src-1.16.2", "buildscript-meson", "bootstrap-binary-image"],
     outputs = ["d-bus-1.16.2"],
   },
 

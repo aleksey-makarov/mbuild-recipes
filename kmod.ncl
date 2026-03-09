@@ -2,7 +2,7 @@
   "kmod-34.2" = {
     type = "binary",
     status = "build failed: meson requires scdoc program (man/meson.build)",
-    inputs = ["kmod-src-34.2", "buildscript-meson"],
+    inputs = ["kmod-src-34.2", "buildscript-meson", "bootstrap-binary-image"],
     outputs = ["kmod-34.2"],
   },
   "kmod-src-34.2" = {

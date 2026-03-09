@@ -1,7 +1,7 @@
 {
   "libtool-2.5.4" = {
     type = "binary",
-    inputs = ["libtool-src-2.5.4", "buildscript-autotools"],
+    inputs = ["libtool-src-2.5.4", "buildscript-autotools", "bootstrap-binary-image"],
     outputs = ["libtool-2.5.4"],
   },
   "libtool-src-2.5.4" = {

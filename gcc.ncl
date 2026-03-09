@@ -28,16 +28,14 @@
         "--disable-libstdcxx",
         "--enable-languages=c,c++",
       ],
-      pre_configure =
-        m%"
+      pre_configure = m%"
         case $(uname -m) in
           x86_64)
             sed -e '/m64=/s/lib64/lib/' -i gcc/config/i386/t-linux64
             ;;
         esac
         "%,
-      post_install =
-        m%"
+      post_install = m%"
         cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
           "$(dirname "$(/out/gcc-pass1-15.2.0/tools/bin/x86_64-lfs-linux-gnu-gcc -print-libgcc-file-name)")/include/limits.h"
         "%,
@@ -52,6 +50,7 @@
       "mpfr-4.2.2",
       "mpc-1.3.1",
       "buildscript-gcc-pass1-15.2.0",
+      "bootstrap-binary-image",
     ],
     outputs = ["gcc-pass1-15.2.0"],
   },
