@@ -2,10 +2,10 @@
   "buildscript-binutils-pass1-2.45" =
     (import "build/autotools.ncl").autotools {
       output = "buildscript-binutils-pass1-2.45",
+      prefix = "/tools",
       in_source = false,
       configure_args = [
-        "--prefix=/out/binutils-pass1-2.45/tools",
-        "--with-sysroot=/out/binutils-pass1-2.45",
+        "--with-sysroot=/",
         "--target=x86_64-lfs-linux-gnu",
         "--disable-nls",
         "--enable-gprofng=no",
