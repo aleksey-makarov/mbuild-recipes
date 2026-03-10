@@ -48,10 +48,10 @@
     outputs = ["gawk-pass1-5.3.2"],
   },
 
-  "gawk-5.3.2" = {
+  "gawk-pass1-bootstrap-5.3.2" = {
     type = "binary",
     inputs = ["gawk-src-5.3.2", "buildscript-autotools", "bootstrap-binary-image"],
-    outputs = ["gawk-5.3.2"],
+    outputs = ["gawk-pass1-bootstrap-5.3.2"],
   },
 
   "gawk-src-5.3.2" = {
