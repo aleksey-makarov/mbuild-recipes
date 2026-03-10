@@ -1,8 +1,8 @@
 {
-  "gzip-1.14" = {
+  "gzip-pass1-1.14" = {
     type = "binary",
-    inputs = ["gzip-src-1.14", "buildscript-autotools", "bootstrap-binary-image"],
-    outputs = ["gzip-1.14"],
+    inputs = ["gzip-src-1.14", "buildscript-autotools-pass1", "bootstrap-pass1"],
+    outputs = ["gzip-pass1-1.14"],
   },
 
   "gzip-src-1.14" = {
