@@ -38,8 +38,8 @@
       make headers
       find usr/include -type f ! -name '*.h' -delete
 
-      mkdir -p "/out/${out}/usr"
-      cp -rv usr/include "/out/${out}/usr"
+      mkdir -p "/out/${out}/bootstrap-root/usr"
+      cp -rv usr/include "/out/${out}/bootstrap-root/usr"
       "%,
   },
 
