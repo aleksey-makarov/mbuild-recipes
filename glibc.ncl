@@ -1,17 +1,4 @@
 {
-  "bootstrap-for-glibc-pass1-2.42" = {
-    type = "image",
-    inputs = [
-      "bootstrap-binary-image",
-      "binutils-pass1-2.45",
-      "gcc-pass1-15.2.0",
-      "linux-api-headers-6.18.10",
-      "bison-3.8.2",
-      "gawk-5.3.2",
-    ],
-    outputs = ["bootstrap-for-glibc-pass1-2.42"],
-  },
-
   "glibc-pass1-2.42" = {
     type = "binary",
     inputs = [

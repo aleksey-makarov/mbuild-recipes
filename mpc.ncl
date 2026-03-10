@@ -10,12 +10,6 @@
       ],
     },
 
-  "bootstrap-for-mpc-pass1-1.3.1" = {
-    type = "image",
-    inputs = ["bootstrap-binary-image", "mpfr-pass1-4.2.2"],
-    outputs = ["bootstrap-for-mpc-pass1-1.3.1"],
-  },
-
   "mpc-pass1-1.3.1" = {
     type = "binary",
     inputs = [

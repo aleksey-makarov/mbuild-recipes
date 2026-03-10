@@ -50,12 +50,6 @@
       "%,
   },
 
-  "bootstrap-for-libstdcxx-pass1-15.2.0" = {
-    type = "image",
-    inputs = ["bootstrap-for-glibc-pass1-2.42", "glibc-pass1-2.42"],
-    outputs = ["bootstrap-for-libstdcxx-pass1-15.2.0"],
-  },
-
   "libstdcxx-pass1-15.2.0" = {
     type = "binary",
     inputs = [
@@ -107,18 +101,6 @@
           "$(dirname "$(/out/${out}/bootstrap-root/tools/bin/x86_64-lfs-linux-gnu-gcc -print-libgcc-file-name)")/include/limits.h"
         "%,
     },
-
-  "bootstrap-for-gcc-pass1-15.2.0" = {
-    type = "image",
-    inputs = [
-      "bootstrap-binary-image",
-      "binutils-pass1-2.45",
-      "gmp-pass1-6.3.0",
-      "mpfr-pass1-4.2.2",
-      "mpc-pass1-1.3.1",
-    ],
-    outputs = ["bootstrap-for-gcc-pass1-15.2.0"],
-  },
 
   "gcc-pass1-15.2.0" = {
     type = "binary",
