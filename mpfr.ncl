@@ -1,13 +1,17 @@
 {
-  "mpfr-4.2.2" = {
+  "mpfr-pass1-4.2.2" = {
     type = "binary",
-    inputs = ["mpfr-src-4.2.2", "buildscript-autotools", "bootstrap-binary-image"],
-    outputs = ["mpfr-4.2.2"],
+    inputs = [
+      "mpfr-src-4.2.2",
+      "buildscript-autotools-bootstrap-root",
+      "bootstrap-binary-image",
+    ],
+    outputs = ["mpfr-pass1-4.2.2"],
   },
 
   "bootstrap-with-mpfr-image-4.2.2" = {
     type = "image",
-    inputs = ["bootstrap-binary-image", "mpfr-4.2.2"],
+    inputs = ["bootstrap-binary-image", "mpfr-pass1-4.2.2"],
     outputs = ["bootstrap-with-mpfr-image-4.2.2"],
   },
 

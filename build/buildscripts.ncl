@@ -5,6 +5,13 @@ let autotools = import "autotools.ncl" in
       output = "buildscript-autotools",
     },
 
+  "buildscript-autotools-bootstrap-root" =
+    autotools.autotools {
+      output = "buildscript-autotools-bootstrap-root",
+      install = "make DESTDIR=\"/out/${out}/bootstrap-root\"",
+      install_args = ["install"],
+    },
+
   "buildscript-cmake" = {
     type = "text",
     artifact_kind = "build-script",

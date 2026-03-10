@@ -1,8 +1,12 @@
 {
-  "gmp-6.3.0" = {
+  "gmp-pass1-6.3.0" = {
     type = "binary",
-    inputs = ["gmp-src-6.3.0", "buildscript-autotools", "bootstrap-binary-image"],
-    outputs = ["gmp-6.3.0"],
+    inputs = [
+      "gmp-src-6.3.0",
+      "buildscript-autotools-bootstrap-root",
+      "bootstrap-binary-image",
+    ],
+    outputs = ["gmp-pass1-6.3.0"],
   },
 
   "gmp-src-6.3.0" = {

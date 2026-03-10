@@ -1,18 +1,29 @@
 {
+  "buildscript-autotools-mpc-pass1-1.3.1" =
+    (import "build/autotools.ncl").autotools {
+      output = "buildscript-autotools-mpc-pass1-1.3.1",
+      install = "make DESTDIR=\"/out/${out}/bootstrap-root\"",
+      install_args = ["install"],
+      configure_args = [
+        "--with-mpfr=/bootstrap-root/usr",
+        "--with-gmp=/bootstrap-root/usr",
+      ],
+    },
+
   "bootstrap-with-mpfr-image-4.2.2" = {
     type = "image",
-    inputs = ["bootstrap-binary-image", "mpfr-4.2.2"],
+    inputs = ["bootstrap-binary-image", "mpfr-pass1-4.2.2"],
     outputs = ["bootstrap-with-mpfr-image-4.2.2"],
   },
 
-  "mpc-1.3.1" = {
+  "mpc-pass1-1.3.1" = {
     type = "binary",
     inputs = [
       "mpc-src-1.3.1",
-      "buildscript-autotools",
+      "buildscript-autotools-mpc-pass1-1.3.1",
       "bootstrap-with-mpfr-image-4.2.2",
     ],
-    outputs = ["mpc-1.3.1"],
+    outputs = ["mpc-pass1-1.3.1"],
   },
 
   "mpc-src-1.3.1" = {
