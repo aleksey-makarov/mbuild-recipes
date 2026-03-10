@@ -108,7 +108,7 @@
         "%,
     },
 
-  "bootstrap-with-binutils-gmp-mpfr-mpc-image-2.45-6.3.0-4.2.2-1.3.1" = {
+  "bootstrap-for-gcc-pass1-15.2.0" = {
     type = "image",
     inputs = [
       "bootstrap-binary-image",
@@ -117,7 +117,7 @@
       "mpfr-pass1-4.2.2",
       "mpc-pass1-1.3.1",
     ],
-    outputs = ["bootstrap-with-binutils-gmp-mpfr-mpc-image-2.45-6.3.0-4.2.2-1.3.1"],
+    outputs = ["bootstrap-for-gcc-pass1-15.2.0"],
   },
 
   "gcc-pass1-15.2.0" = {
@@ -125,7 +125,7 @@
     inputs = [
       "gcc-src-15.2.0",
       "buildscript-gcc-pass1-15.2.0",
-      "bootstrap-with-binutils-gmp-mpfr-mpc-image-2.45-6.3.0-4.2.2-1.3.1",
+      "bootstrap-for-gcc-pass1-15.2.0",
     ],
     outputs = ["gcc-pass1-15.2.0"],
   },
