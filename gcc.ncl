@@ -25,11 +25,6 @@
       fi
 
       export PATH="/tools/bin:${PATH:-}"
-      export CC="x86_64-lfs-linux-gnu-gcc"
-      export CXX="x86_64-lfs-linux-gnu-g++"
-      export AR="x86_64-lfs-linux-gnu-ar"
-      export RANLIB="x86_64-lfs-linux-gnu-ranlib"
-      export LD="x86_64-lfs-linux-gnu-ld"
 
       mkdir -p build
       cd build
