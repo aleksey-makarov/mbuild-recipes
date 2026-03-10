@@ -49,4 +49,10 @@
     ],
     outputs = ["bootstrap-pass1"],
   },
+
+  "bootstrap-for-gcc-pass2-15.2.0" = {
+    type = "image",
+    inputs = ["bootstrap-pass1", "binutils-pass2-2.45"],
+    outputs = ["bootstrap-for-gcc-pass2-15.2.0"],
+  },
 }

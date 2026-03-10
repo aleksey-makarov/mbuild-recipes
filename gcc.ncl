@@ -112,6 +112,106 @@
     outputs = ["gcc-pass1-15.2.0"],
   },
 
+  "buildscript-gcc-pass2-15.2.0" = {
+    type = "text",
+    artifact_kind = "build-script",
+    outputs = ["buildscript-gcc-pass2-15.2.0"],
+    source = m%"
+      #!/usr/bin/env bash
+      set -euo pipefail
+
+      src="${MBUILD_SOURCE_INPUT:?MBUILD_SOURCE_INPUT is required}"
+      out="${MBUILD_PRIMARY_OUTPUT:?MBUILD_PRIMARY_OUTPUT is required}"
+
+      gcc_root="/in/${src}"
+      gmp_root="/in/gmp-src-6.3.0"
+      mpfr_root="/in/mpfr-src-4.2.2"
+      mpc_root="/in/mpc-src-1.3.1"
+
+      detect_src_dir() {
+        local root="$1"
+        local entry
+        local -a candidates=()
+        for entry in "$root"/*; do
+          [ -d "$entry" ] || continue
+          candidates+=("$entry")
+        done
+        if [ "${#candidates[@]}" -eq 1 ]; then
+          printf '%s\n' "${candidates[0]}"
+        else
+          printf '%s\n' "$root"
+        fi
+      }
+
+      gcc_dir="$(detect_src_dir "${gcc_root}")"
+      gmp_dir="$(detect_src_dir "${gmp_root}")"
+      mpfr_dir="$(detect_src_dir "${mpfr_root}")"
+      mpc_dir="$(detect_src_dir "${mpc_root}")"
+
+      cd "${gcc_dir}"
+
+      rm -rf gmp mpfr mpc
+      cp -a "${gmp_dir}" gmp
+      cp -a "${mpfr_dir}" mpfr
+      cp -a "${mpc_dir}" mpc
+
+      case $(uname -m) in
+        x86_64)
+          sed -e '/m64=/s/lib64/lib/' -i.orig gcc/config/i386/t-linux64
+          ;;
+      esac
+
+      sed '/thread_header =/s/@.*@/gthr-posix.h/' \
+        -i libgcc/Makefile.in libstdc++-v3/include/Makefile.in
+
+      unset CFLAGS
+      unset CXXFLAGS
+
+      export PATH="/bootstrap-root/tools/bin:${PATH:-}"
+
+      mkdir -p build
+      cd build
+
+      ../configure                   \
+        --build="$(../config.guess)" \
+        --host=x86_64-lfs-linux-gnu  \
+        --target=x86_64-lfs-linux-gnu \
+        --prefix=/usr                \
+        --with-build-sysroot=/bootstrap-root \
+        --enable-default-pie         \
+        --enable-default-ssp         \
+        --disable-nls                \
+        --disable-multilib           \
+        --disable-libatomic          \
+        --disable-libgomp            \
+        --disable-libquadmath        \
+        --disable-libsanitizer       \
+        --disable-libssp             \
+        --disable-libvtv             \
+        --enable-languages=c,c++     \
+        LDFLAGS_FOR_TARGET="-L$PWD/x86_64-lfs-linux-gnu/libgcc"
+
+      jobs="$(getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)"
+      make -j"${jobs}"
+      make DESTDIR="/out/${out}/bootstrap-root" install
+
+      ln -svf gcc "/out/${out}/bootstrap-root/usr/bin/cc"
+      "%,
+  },
+
+  "gcc-pass2-15.2.0" = {
+    type = "binary",
+    inputs = [
+      "gcc-src-15.2.0",
+      "gmp-src-6.3.0",
+      "mpfr-src-4.2.2",
+      "mpc-src-1.3.1",
+      "buildscript-gcc-pass2-15.2.0",
+      "bootstrap-for-gcc-pass2-15.2.0",
+    ],
+    outputs = ["gcc-pass2-15.2.0"],
+  },
+
   "gcc-src-15.2.0" = {
     type = "fetch",
     outputs = ["gcc-src-15.2.0"],
