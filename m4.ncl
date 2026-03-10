@@ -1,8 +1,12 @@
 {
-  "m4-1.4.20" = {
+  "m4-pass1-1.4.20" = {
     type = "binary",
-    inputs = ["m4-src-1.4.20", "buildscript-autotools", "bootstrap-binary-image"],
-    outputs = ["m4-1.4.20"],
+    inputs = [
+      "m4-src-1.4.20",
+      "buildscript-autotools-pass1",
+      "bootstrap-pass1",
+    ],
+    outputs = ["m4-pass1-1.4.20"],
   },
   "m4-src-1.4.20" = {
     type = "fetch",
